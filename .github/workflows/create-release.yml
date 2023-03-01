@@ -17,7 +17,7 @@ jobs:
             token: ${{ secrets.GITHUB_TOKEN }}
   create-github-release:
     name: Create GitHub Release
-    need: generate-release-notes
+    needs: generate-release-notes
     runs-on: ubuntu-latest
     permissions:
       contents: write
