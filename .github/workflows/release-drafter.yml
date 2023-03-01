@@ -10,19 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  tag-new-versions:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-          with:
-            fetch-depth: 2
-        - uses: salsify/action-detect-and-tag-new-version@v2
-          with:
-            version-command: |
-              cat current-version.txt
-
   update_release_draft:
-    needs: tag-new-versions
     permissions:
       # write permission is required to create a github release
       contents: write
@@ -44,3 +32,9 @@ jobs:
         #   disable-autolabeler: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish Release
+        uses: eregon/publish-release@v1.0.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_id: ${{ steps.create_release.outputs.id }}
