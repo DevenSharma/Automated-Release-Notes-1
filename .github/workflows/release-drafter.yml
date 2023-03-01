@@ -29,10 +29,8 @@ jobs:
         # with:
         #   config-name: my-config.yml
         #   disable-autolabeler: true
-      - name: Run git command
+      - name: Create Release
         run: |
-          git tag --list "draft-*"
-          git tag -n1 ${{ github.ref }}
-          git push origin ${{ github.ref }}
+          gh release create ${{ github.ref }} --title "Release ${{ github.ref }}" --notes-file RELEASE_NOTES.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
