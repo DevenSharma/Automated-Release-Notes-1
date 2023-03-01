@@ -20,3 +20,4 @@ updated docs 2.6
 updated docs 2.7
 updated docs 2.7
 updated docs 2.9
+updated docs 3.0
