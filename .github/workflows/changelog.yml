@@ -1,7 +1,8 @@
 name: Generate changelog
 on:
   push:
-    branches: [ main ]
+    tags:
+      - 'v*'
 jobs:
   generate-changelog:
     runs-on: ubuntu-latest
