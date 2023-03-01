@@ -5,7 +5,7 @@ changelog:
     - breaking-change
   - title: Features 
     labels:
-    - feature
+    - feat
   - title: Bug fixes 
     labels:
     - bug
