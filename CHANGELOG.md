@@ -1,5 +1,7 @@
 
 
+### [1.3.2](https://github.com/DevenSharma/Automated-Release-Notes-1/compare/v1.3.1...v1.3.2) (2023-03-01)
+
 ### [1.3.1](https://github.com/DevenSharma/Automated-Release-Notes-1/compare/v1.3.0...v1.3.1) (2023-03-01)
 
 ## [1.3.0](https://github.com/DevenSharma/Automated-Release-Notes-1/compare/v1.2.1...v1.3.0) (2023-03-01)
